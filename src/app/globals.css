@@ -1,0 +1,114 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 48 33% 97%; /* Off-white with gold tint */
+    --foreground: 20 14.3% 4.1%; /* Dark gray for text */
+
+    --card: 48 33% 97%; /* Same as background for cards */
+    --card-foreground: 20 14.3% 4.1%;
+
+    --popover: 48 33% 97%;
+    --popover-foreground: 20 14.3% 4.1%;
+
+    --primary: 45 74% 52%; /* Soft Gold */
+    --primary-foreground: 20 14.3% 4.1%; /* Text on primary */
+
+    --secondary: 43 50% 85%; /* Lighter gold for secondary elements */
+    --secondary-foreground: 43 70% 30%;
+
+    --muted: 43 30% 90%;
+    --muted-foreground: 20 8% 40%;
+
+    --accent: 43 100% 36%; /* Dark Gold */
+    --accent-foreground: 0 0% 98%; /* Text on accent */
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 45 50% 80%; /* Gold-tinted border */
+    --input: 45 50% 88%; /* Gold-tinted input background */
+    --ring: 45 74% 52%; /* Soft Gold for rings */
+
+    --radius: 0.8rem; /* Increased radius for softer corners */
+
+    --chart-1: 45 74% 52%;
+    --chart-2: 43 100% 36%;
+    --chart-3: 48 60% 60%;
+    --chart-4: 45 80% 70%;
+    --chart-5: 43 90% 45%;
+
+    /* Sidebar colors - can be adjusted if sidebar is used, for now align with main theme */
+    --sidebar-background: 48 33% 95%;
+    --sidebar-foreground: 20 14.3% 4.1%;
+    --sidebar-primary: 45 74% 52%;
+    --sidebar-primary-foreground: 20 14.3% 4.1%;
+    --sidebar-accent: 43 100% 36%;
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 45 50% 80%;
+    --sidebar-ring: 45 74% 52%;
+  }
+
+  .dark {
+    /* For dark mode, we can invert or use a darker gold-themed palette */
+    --background: 20 14.3% 4.1%; /* Dark Gray */
+    --foreground: 0 0% 98%; /* Off-white text */
+
+    --card: 20 14.3% 6.1%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 20 14.3% 4.1%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 45 74% 52%; /* Soft Gold - remains vibrant */
+    --primary-foreground: 20 14.3% 4.1%;
+
+    --secondary: 43 80% 25%; /* Darker gold for secondary */
+    --secondary-foreground: 0 0% 95%;
+
+    --muted: 20 10% 15%;
+    --muted-foreground: 0 0% 60%;
+
+    --accent: 43 100% 40%; /* Dark Gold - slightly lighter for dark bg */
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 45 50% 30%;
+    --input: 45 50% 20%;
+    --ring: 45 74% 52%;
+
+    /* Sidebar dark colors */
+    --sidebar-background: 20 14.3% 5.1%;
+    --sidebar-foreground: 0 0% 98%;
+    --sidebar-primary: 45 74% 52%;
+    --sidebar-primary-foreground: 20 14.3% 4.1%;
+    --sidebar-accent: 43 100% 40%;
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 45 50% 30%;
+    --sidebar-ring: 45 74% 52%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    /* font-family is set in layout.tsx via className */
+  }
+  /* Generous spacing and modern feel for headings */
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-headline mb-4 tracking-tight;
+  }
+  h1 { @apply text-4xl font-bold lg:text-5xl; }
+  h2 { @apply text-3xl font-semibold lg:text-4xl; }
+  h3 { @apply text-2xl font-semibold lg:text-3xl; }
+  p, li, span, div {
+    @apply font-body;
+  }
+}
